@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: dbAgnos
+  profiles:
+    # Default active profile if none specified. 
+    # Can be overridden by CLI args e.g. --spring.profiles.active=dev,mysql
+    active: dev,h2 
+    group:
+      # We can define groups if we want shortcuts, e.g. 'local' -> dev, h2
+      local: dev,h2
+      
+  jpa:
+    open-in-view: false
+
+# Common Flyway Configuration
+spring.flyway:
+  enabled: true
+  baseline-on-migrate: true
+
+logging:
+  level:
+    root: INFO
+
